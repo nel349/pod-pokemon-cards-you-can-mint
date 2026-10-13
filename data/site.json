@@ -1,0 +1,14 @@
+{
+  "contract": "0x0AF9b4C9059F4bc810737da76fecB7B6af920e40",
+  "chainIdHex": "0x279f",
+  "chainId": 10143,
+  "chainName": "Monad testnet",
+  "rpcForWallet": "https://testnet-rpc.monad.xyz",
+  "explorer": "https://testnet.monadscan.com",
+  "coin": "MON",
+  "priceLabel": "0.1",
+  "priceWeiHex": "0x16345785d8a0000",
+  "editions": 10,
+  "mintSelector": "0xa0712d68",
+  "statusSelector": "0x6289aa08"
+}

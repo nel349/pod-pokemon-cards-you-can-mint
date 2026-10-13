@@ -1,0 +1,497 @@
+[
+  {
+    "id": 1,
+    "name": "Bulbasaur",
+    "slug": "bulbasaur",
+    "types": [
+      "grass",
+      "poison"
+    ],
+    "heightM": 0.7,
+    "weightKg": 6.9,
+    "strong": [
+      "water",
+      "grass",
+      "ground",
+      "rock",
+      "fairy"
+    ],
+    "weak": [
+      "fire",
+      "ice",
+      "flying",
+      "psychic"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Charmander",
+    "slug": "charmander",
+    "types": [
+      "fire"
+    ],
+    "heightM": 0.6,
+    "weightKg": 8.5,
+    "strong": [
+      "grass",
+      "ice",
+      "bug",
+      "steel"
+    ],
+    "weak": [
+      "water",
+      "ground",
+      "rock"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Charizard",
+    "slug": "charizard",
+    "types": [
+      "fire",
+      "flying"
+    ],
+    "heightM": 1.7,
+    "weightKg": 90.5,
+    "strong": [
+      "grass",
+      "ice",
+      "fighting",
+      "bug",
+      "steel"
+    ],
+    "weak": [
+      "water",
+      "electric",
+      "rock"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Squirtle",
+    "slug": "squirtle",
+    "types": [
+      "water"
+    ],
+    "heightM": 0.5,
+    "weightKg": 9,
+    "strong": [
+      "fire",
+      "ground",
+      "rock"
+    ],
+    "weak": [
+      "electric",
+      "grass"
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Blastoise",
+    "slug": "blastoise",
+    "types": [
+      "water"
+    ],
+    "heightM": 1.6,
+    "weightKg": 85.5,
+    "strong": [
+      "fire",
+      "ground",
+      "rock"
+    ],
+    "weak": [
+      "electric",
+      "grass"
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Butterfree",
+    "slug": "butterfree",
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "heightM": 1.1,
+    "weightKg": 32,
+    "strong": [
+      "grass",
+      "fighting",
+      "psychic",
+      "bug",
+      "dark"
+    ],
+    "weak": [
+      "fire",
+      "electric",
+      "ice",
+      "flying",
+      "rock"
+    ]
+  },
+  {
+    "id": 25,
+    "name": "Pikachu",
+    "slug": "pikachu",
+    "types": [
+      "electric"
+    ],
+    "heightM": 0.4,
+    "weightKg": 6,
+    "strong": [
+      "water",
+      "flying"
+    ],
+    "weak": [
+      "ground"
+    ]
+  },
+  {
+    "id": 26,
+    "name": "Raichu",
+    "slug": "raichu",
+    "types": [
+      "electric"
+    ],
+    "heightM": 0.8,
+    "weightKg": 30,
+    "strong": [
+      "water",
+      "flying"
+    ],
+    "weak": [
+      "ground"
+    ]
+  },
+  {
+    "id": 35,
+    "name": "Clefairy",
+    "slug": "clefairy",
+    "types": [
+      "fairy"
+    ],
+    "heightM": 0.6,
+    "weightKg": 7.5,
+    "strong": [
+      "fighting",
+      "dragon",
+      "dark"
+    ],
+    "weak": [
+      "poison",
+      "steel"
+    ]
+  },
+  {
+    "id": 39,
+    "name": "Jigglypuff",
+    "slug": "jigglypuff",
+    "types": [
+      "normal",
+      "fairy"
+    ],
+    "heightM": 0.5,
+    "weightKg": 5.5,
+    "strong": [
+      "fighting",
+      "dragon",
+      "dark"
+    ],
+    "weak": [
+      "poison",
+      "steel"
+    ]
+  },
+  {
+    "id": 52,
+    "name": "Meowth",
+    "slug": "meowth",
+    "types": [
+      "normal"
+    ],
+    "heightM": 0.4,
+    "weightKg": 4.2,
+    "strong": [],
+    "weak": [
+      "fighting"
+    ]
+  },
+  {
+    "id": 54,
+    "name": "Psyduck",
+    "slug": "psyduck",
+    "types": [
+      "water"
+    ],
+    "heightM": 0.8,
+    "weightKg": 19.6,
+    "strong": [
+      "fire",
+      "ground",
+      "rock"
+    ],
+    "weak": [
+      "electric",
+      "grass"
+    ]
+  },
+  {
+    "id": 63,
+    "name": "Abra",
+    "slug": "abra",
+    "types": [
+      "psychic"
+    ],
+    "heightM": 0.9,
+    "weightKg": 19.5,
+    "strong": [
+      "fighting",
+      "poison"
+    ],
+    "weak": [
+      "bug",
+      "ghost",
+      "dark"
+    ]
+  },
+  {
+    "id": 68,
+    "name": "Machamp",
+    "slug": "machamp",
+    "types": [
+      "fighting"
+    ],
+    "heightM": 1.6,
+    "weightKg": 130,
+    "strong": [
+      "normal",
+      "ice",
+      "rock",
+      "dark",
+      "steel"
+    ],
+    "weak": [
+      "flying",
+      "psychic",
+      "fairy"
+    ]
+  },
+  {
+    "id": 74,
+    "name": "Geodude",
+    "slug": "geodude",
+    "types": [
+      "rock",
+      "ground"
+    ],
+    "heightM": 0.4,
+    "weightKg": 20,
+    "strong": [
+      "fire",
+      "electric",
+      "ice",
+      "poison",
+      "flying",
+      "bug",
+      "rock",
+      "steel"
+    ],
+    "weak": [
+      "water",
+      "grass",
+      "ice",
+      "fighting",
+      "ground",
+      "steel"
+    ]
+  },
+  {
+    "id": 92,
+    "name": "Gastly",
+    "slug": "gastly",
+    "types": [
+      "ghost",
+      "poison"
+    ],
+    "heightM": 1.3,
+    "weightKg": 0.1,
+    "strong": [
+      "grass",
+      "psychic",
+      "ghost",
+      "fairy"
+    ],
+    "weak": [
+      "ground",
+      "psychic",
+      "ghost",
+      "dark"
+    ]
+  },
+  {
+    "id": 94,
+    "name": "Gengar",
+    "slug": "gengar",
+    "types": [
+      "ghost",
+      "poison"
+    ],
+    "heightM": 1.5,
+    "weightKg": 40.5,
+    "strong": [
+      "grass",
+      "psychic",
+      "ghost",
+      "fairy"
+    ],
+    "weak": [
+      "ground",
+      "psychic",
+      "ghost",
+      "dark"
+    ]
+  },
+  {
+    "id": 104,
+    "name": "Cubone",
+    "slug": "cubone",
+    "types": [
+      "ground"
+    ],
+    "heightM": 0.4,
+    "weightKg": 6.5,
+    "strong": [
+      "fire",
+      "electric",
+      "poison",
+      "rock",
+      "steel"
+    ],
+    "weak": [
+      "water",
+      "grass",
+      "ice"
+    ]
+  },
+  {
+    "id": 123,
+    "name": "Scyther",
+    "slug": "scyther",
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "heightM": 1.5,
+    "weightKg": 56,
+    "strong": [
+      "grass",
+      "fighting",
+      "psychic",
+      "bug",
+      "dark"
+    ],
+    "weak": [
+      "fire",
+      "electric",
+      "ice",
+      "flying",
+      "rock"
+    ]
+  },
+  {
+    "id": 130,
+    "name": "Gyarados",
+    "slug": "gyarados",
+    "types": [
+      "water",
+      "flying"
+    ],
+    "heightM": 6.5,
+    "weightKg": 235,
+    "strong": [
+      "fire",
+      "grass",
+      "fighting",
+      "ground",
+      "bug",
+      "rock"
+    ],
+    "weak": [
+      "electric",
+      "rock"
+    ]
+  },
+  {
+    "id": 131,
+    "name": "Lapras",
+    "slug": "lapras",
+    "types": [
+      "water",
+      "ice"
+    ],
+    "heightM": 2.5,
+    "weightKg": 220,
+    "strong": [
+      "fire",
+      "grass",
+      "ground",
+      "flying",
+      "rock",
+      "dragon"
+    ],
+    "weak": [
+      "electric",
+      "grass",
+      "fighting",
+      "rock"
+    ]
+  },
+  {
+    "id": 133,
+    "name": "Eevee",
+    "slug": "eevee",
+    "types": [
+      "normal"
+    ],
+    "heightM": 0.3,
+    "weightKg": 6.5,
+    "strong": [],
+    "weak": [
+      "fighting"
+    ]
+  },
+  {
+    "id": 143,
+    "name": "Snorlax",
+    "slug": "snorlax",
+    "types": [
+      "normal"
+    ],
+    "heightM": 2.1,
+    "weightKg": 460,
+    "strong": [],
+    "weak": [
+      "fighting"
+    ]
+  },
+  {
+    "id": 150,
+    "name": "Mewtwo",
+    "slug": "mewtwo",
+    "types": [
+      "psychic"
+    ],
+    "heightM": 2,
+    "weightKg": 122,
+    "strong": [
+      "fighting",
+      "poison"
+    ],
+    "weak": [
+      "bug",
+      "ghost",
+      "dark"
+    ]
+  }
+]

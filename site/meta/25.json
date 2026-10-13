@@ -1,0 +1,23 @@
+{
+  "name": "Pikachu #025",
+  "description": "Pikachu, Electric. One of 10 minted on Monad testnet.",
+  "image": "/img/pikachu.png",
+  "attributes": [
+    {
+      "trait_type": "Pokedex number",
+      "value": 25
+    },
+    {
+      "trait_type": "Type",
+      "value": "Electric"
+    },
+    {
+      "trait_type": "Height (m)",
+      "value": 0.4
+    },
+    {
+      "trait_type": "Weight (kg)",
+      "value": 6
+    }
+  ]
+}

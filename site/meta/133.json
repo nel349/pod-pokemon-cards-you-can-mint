@@ -1,0 +1,23 @@
+{
+  "name": "Eevee #133",
+  "description": "Eevee, Normal. One of 10 minted on Monad testnet.",
+  "image": "/img/eevee.png",
+  "attributes": [
+    {
+      "trait_type": "Pokedex number",
+      "value": 133
+    },
+    {
+      "trait_type": "Type",
+      "value": "Normal"
+    },
+    {
+      "trait_type": "Height (m)",
+      "value": 0.3
+    },
+    {
+      "trait_type": "Weight (kg)",
+      "value": 6.5
+    }
+  ]
+}

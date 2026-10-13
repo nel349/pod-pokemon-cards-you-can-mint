@@ -1,0 +1,27 @@
+{
+  "name": "Charizard #006",
+  "description": "Charizard, Fire / Flying. One of 10 minted on Monad testnet.",
+  "image": "/img/charizard.png",
+  "attributes": [
+    {
+      "trait_type": "Pokedex number",
+      "value": 6
+    },
+    {
+      "trait_type": "Type",
+      "value": "Fire"
+    },
+    {
+      "trait_type": "Type",
+      "value": "Flying"
+    },
+    {
+      "trait_type": "Height (m)",
+      "value": 1.7
+    },
+    {
+      "trait_type": "Weight (kg)",
+      "value": 90.5
+    }
+  ]
+}

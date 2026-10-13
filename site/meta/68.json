@@ -1,0 +1,23 @@
+{
+  "name": "Machamp #068",
+  "description": "Machamp, Fighting. One of 10 minted on Monad testnet.",
+  "image": "/img/machamp.png",
+  "attributes": [
+    {
+      "trait_type": "Pokedex number",
+      "value": 68
+    },
+    {
+      "trait_type": "Type",
+      "value": "Fighting"
+    },
+    {
+      "trait_type": "Height (m)",
+      "value": 1.6
+    },
+    {
+      "trait_type": "Weight (kg)",
+      "value": 130
+    }
+  ]
+}

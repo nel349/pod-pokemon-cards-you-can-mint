@@ -1,0 +1,23 @@
+{
+  "name": "Clefairy #035",
+  "description": "Clefairy, Fairy. One of 10 minted on Monad testnet.",
+  "image": "/img/clefairy.png",
+  "attributes": [
+    {
+      "trait_type": "Pokedex number",
+      "value": 35
+    },
+    {
+      "trait_type": "Type",
+      "value": "Fairy"
+    },
+    {
+      "trait_type": "Height (m)",
+      "value": 0.6
+    },
+    {
+      "trait_type": "Weight (kg)",
+      "value": 7.5
+    }
+  ]
+}

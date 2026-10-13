@@ -1,0 +1,27 @@
+{
+  "name": "Scyther #123",
+  "description": "Scyther, Bug / Flying. One of 10 minted on Monad testnet.",
+  "image": "/img/scyther.png",
+  "attributes": [
+    {
+      "trait_type": "Pokedex number",
+      "value": 123
+    },
+    {
+      "trait_type": "Type",
+      "value": "Bug"
+    },
+    {
+      "trait_type": "Type",
+      "value": "Flying"
+    },
+    {
+      "trait_type": "Height (m)",
+      "value": 1.5
+    },
+    {
+      "trait_type": "Weight (kg)",
+      "value": 56
+    }
+  ]
+}

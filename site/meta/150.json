@@ -1,0 +1,23 @@
+{
+  "name": "Mewtwo #150",
+  "description": "Mewtwo, Psychic. One of 10 minted on Monad testnet.",
+  "image": "/img/mewtwo.png",
+  "attributes": [
+    {
+      "trait_type": "Pokedex number",
+      "value": 150
+    },
+    {
+      "trait_type": "Type",
+      "value": "Psychic"
+    },
+    {
+      "trait_type": "Height (m)",
+      "value": 2
+    },
+    {
+      "trait_type": "Weight (kg)",
+      "value": 122
+    }
+  ]
+}

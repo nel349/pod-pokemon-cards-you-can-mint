@@ -1,0 +1,27 @@
+{
+  "name": "Gyarados #130",
+  "description": "Gyarados, Water / Flying. One of 10 minted on Monad testnet.",
+  "image": "/img/gyarados.png",
+  "attributes": [
+    {
+      "trait_type": "Pokedex number",
+      "value": 130
+    },
+    {
+      "trait_type": "Type",
+      "value": "Water"
+    },
+    {
+      "trait_type": "Type",
+      "value": "Flying"
+    },
+    {
+      "trait_type": "Height (m)",
+      "value": 6.5
+    },
+    {
+      "trait_type": "Weight (kg)",
+      "value": 235
+    }
+  ]
+}

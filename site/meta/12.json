@@ -1,0 +1,27 @@
+{
+  "name": "Butterfree #012",
+  "description": "Butterfree, Bug / Flying. One of 10 minted on Monad testnet.",
+  "image": "/img/butterfree.png",
+  "attributes": [
+    {
+      "trait_type": "Pokedex number",
+      "value": 12
+    },
+    {
+      "trait_type": "Type",
+      "value": "Bug"
+    },
+    {
+      "trait_type": "Type",
+      "value": "Flying"
+    },
+    {
+      "trait_type": "Height (m)",
+      "value": 1.1
+    },
+    {
+      "trait_type": "Weight (kg)",
+      "value": 32
+    }
+  ]
+}

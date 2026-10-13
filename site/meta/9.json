@@ -1,0 +1,23 @@
+{
+  "name": "Blastoise #009",
+  "description": "Blastoise, Water. One of 10 minted on Monad testnet.",
+  "image": "/img/blastoise.png",
+  "attributes": [
+    {
+      "trait_type": "Pokedex number",
+      "value": 9
+    },
+    {
+      "trait_type": "Type",
+      "value": "Water"
+    },
+    {
+      "trait_type": "Height (m)",
+      "value": 1.6
+    },
+    {
+      "trait_type": "Weight (kg)",
+      "value": 85.5
+    }
+  ]
+}

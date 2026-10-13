@@ -1,0 +1,27 @@
+{
+  "name": "Gengar #094",
+  "description": "Gengar, Ghost / Poison. One of 10 minted on Monad testnet.",
+  "image": "/img/gengar.png",
+  "attributes": [
+    {
+      "trait_type": "Pokedex number",
+      "value": 94
+    },
+    {
+      "trait_type": "Type",
+      "value": "Ghost"
+    },
+    {
+      "trait_type": "Type",
+      "value": "Poison"
+    },
+    {
+      "trait_type": "Height (m)",
+      "value": 1.5
+    },
+    {
+      "trait_type": "Weight (kg)",
+      "value": 40.5
+    }
+  ]
+}

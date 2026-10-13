@@ -1,0 +1,27 @@
+{
+  "name": "Jigglypuff #039",
+  "description": "Jigglypuff, Normal / Fairy. One of 10 minted on Monad testnet.",
+  "image": "/img/jigglypuff.png",
+  "attributes": [
+    {
+      "trait_type": "Pokedex number",
+      "value": 39
+    },
+    {
+      "trait_type": "Type",
+      "value": "Normal"
+    },
+    {
+      "trait_type": "Type",
+      "value": "Fairy"
+    },
+    {
+      "trait_type": "Height (m)",
+      "value": 0.5
+    },
+    {
+      "trait_type": "Weight (kg)",
+      "value": 5.5
+    }
+  ]
+}

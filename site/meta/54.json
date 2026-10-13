@@ -1,0 +1,23 @@
+{
+  "name": "Psyduck #054",
+  "description": "Psyduck, Water. One of 10 minted on Monad testnet.",
+  "image": "/img/psyduck.png",
+  "attributes": [
+    {
+      "trait_type": "Pokedex number",
+      "value": 54
+    },
+    {
+      "trait_type": "Type",
+      "value": "Water"
+    },
+    {
+      "trait_type": "Height (m)",
+      "value": 0.8
+    },
+    {
+      "trait_type": "Weight (kg)",
+      "value": 19.6
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "name": "Geodude #074",
+  "description": "Geodude, Rock / Ground. One of 10 minted on Monad testnet.",
+  "image": "/img/geodude.png",
+  "attributes": [
+    {
+      "trait_type": "Pokedex number",
+      "value": 74
+    },
+    {
+      "trait_type": "Type",
+      "value": "Rock"
+    },
+    {
+      "trait_type": "Type",
+      "value": "Ground"
+    },
+    {
+      "trait_type": "Height (m)",
+      "value": 0.4
+    },
+    {
+      "trait_type": "Weight (kg)",
+      "value": 20
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "name": "Bulbasaur #001",
+  "description": "Bulbasaur, Grass / Poison. One of 10 minted on Monad testnet.",
+  "image": "/img/bulbasaur.png",
+  "attributes": [
+    {
+      "trait_type": "Pokedex number",
+      "value": 1
+    },
+    {
+      "trait_type": "Type",
+      "value": "Grass"
+    },
+    {
+      "trait_type": "Type",
+      "value": "Poison"
+    },
+    {
+      "trait_type": "Height (m)",
+      "value": 0.7
+    },
+    {
+      "trait_type": "Weight (kg)",
+      "value": 6.9
+    }
+  ]
+}

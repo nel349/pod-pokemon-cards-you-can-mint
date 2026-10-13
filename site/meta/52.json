@@ -1,0 +1,23 @@
+{
+  "name": "Meowth #052",
+  "description": "Meowth, Normal. One of 10 minted on Monad testnet.",
+  "image": "/img/meowth.png",
+  "attributes": [
+    {
+      "trait_type": "Pokedex number",
+      "value": 52
+    },
+    {
+      "trait_type": "Type",
+      "value": "Normal"
+    },
+    {
+      "trait_type": "Height (m)",
+      "value": 0.4
+    },
+    {
+      "trait_type": "Weight (kg)",
+      "value": 4.2
+    }
+  ]
+}

@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gastly #092 - mint it on Monad testnet</title>
+<meta name="description" content="Gastly, Ghost / Poison. Height, weight, what it is strong and weak against, and a mint on Monad testnet for 0.1 MON.">
+<style>
+:root {
+  --ink: #f2f4f8; --dim: #a9b2c4; --edge: #2a3350; --panel: #161c30; --panel2: #1e2640;
+  --accent: #8ab4ff; --good: #4ade80; --warn: #fbbf24;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: radial-gradient(1200px 700px at 50% -200px, #24305c, #0c1020 60%) fixed, #0c1020;
+  color: var(--ink); font: 16px/1.55 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+a { color: var(--accent); }
+.wrap { max-width: 1100px; margin: 0 auto; padding: 24px 16px 72px; }
+header.top { display: flex; flex-wrap: wrap; gap: 12px; align-items: flex-end; justify-content: space-between; }
+h1 { font-size: 30px; margin: 0 0 4px; letter-spacing: -0.01em; }
+.sub { color: var(--dim); margin: 0; }
+.chain {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin: 18px 0 0;
+  background: var(--panel); border: 1px solid var(--edge); border-radius: 14px; padding: 12px 14px;
+}
+.chain .who { font-variant-numeric: tabular-nums; color: var(--dim); font-size: 14px; word-break: break-all; }
+button {
+  font: inherit; font-weight: 600; cursor: pointer; border-radius: 10px; padding: 9px 16px;
+  border: 1px solid var(--edge); background: var(--panel2); color: var(--ink);
+}
+button.primary { background: linear-gradient(#3f6fe0, #2f55bb); border-color: #4f7ae8; }
+button:disabled { opacity: .5; cursor: not-allowed; }
+.searchbar { margin: 18px 0 6px; }
+.searchbar input {
+  width: 100%; font: inherit; padding: 13px 16px; border-radius: 12px; color: var(--ink);
+  background: var(--panel); border: 1px solid var(--edge);
+}
+.count { color: var(--dim); font-size: 14px; margin: 8px 2px 16px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 16px; }
+.card {
+  background: linear-gradient(180deg, var(--panel2), var(--panel)); border: 1px solid var(--edge);
+  border-radius: 18px; padding: 14px; display: flex; flex-direction: column; gap: 8px;
+}
+.card button.mint { margin-top: auto; }
+.yours:empty, .state:empty { display: none; }
+.card img.art { width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: contain; display: block; background: #0f1426; border-radius: 12px; }
+.dex { margin: 2px 0 0; color: var(--dim); font-size: 13px; letter-spacing: .04em; text-transform: uppercase; }
+.name { margin: 0; font-size: 20px; }
+.name a { text-decoration: none; color: var(--ink); }
+.name a:hover { text-decoration: underline; }
+.pills { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; }
+.pill { font-size: 12px; font-weight: 700; padding: 3px 9px; border-radius: 999px; color: #0b0f1c; }
+.price { margin: 4px 0 0; font-size: 14px; color: var(--dim); }
+.price b { color: var(--ink); font-size: 16px; white-space: nowrap; }
+.left { font-size: 13px; color: var(--dim); min-height: 19px; margin: 0; }
+.left.gone { color: var(--warn); }
+.yours { font-size: 13px; color: var(--good); font-weight: 700; margin: 0; }
+.cardlink { font-size: 14px; margin: 0; }
+.state { font-size: 13px; color: var(--dim); word-break: break-all; margin: 0; }
+.state.bad { color: #ff9b9b; }
+.detail { display: grid; grid-template-columns: 320px 1fr; gap: 28px; align-items: start; margin-top: 18px; }
+.detail img.art { width: 100%; height: auto; background: var(--panel); border: 1px solid var(--edge); border-radius: 20px; }
+.facts { border-collapse: collapse; width: 100%; margin: 14px 0; }
+.facts th, .facts td { text-align: left; padding: 9px 10px; border-bottom: 1px solid var(--edge); vertical-align: top; }
+.facts th { color: var(--dim); font-weight: 600; width: 44%; }
+.buy { background: var(--panel); border: 1px solid var(--edge); border-radius: 16px; padding: 16px; margin-top: 10px; }
+.notes { margin-top: 44px; background: var(--panel); border: 1px solid var(--edge); border-radius: 16px; padding: 18px 20px; }
+.notes h2 { font-size: 18px; margin: 0 0 10px; }
+.notes li { margin-bottom: 8px; color: var(--dim); }
+.notes li b { color: var(--ink); }
+code { background: #0f1426; border: 1px solid var(--edge); border-radius: 6px; padding: 1px 5px; font-size: 13px; word-break: break-all; }
+.back { display: inline-block; margin-bottom: 6px; font-size: 14px; }
+@media (max-width: 760px) {
+  .grid { grid-template-columns: 1fr; }
+  .detail { grid-template-columns: 1fr; }
+  h1 { font-size: 24px; }
+  .wrap { padding: 16px 14px 56px; }
+  /* One column, so the art is kept short enough that a card fits a phone screen. */
+  .card img.art { aspect-ratio: 2 / 1; }
+  .detail .card img.art { aspect-ratio: 1 / 1; max-width: 300px; margin: 0 auto; }
+  .facts th, .facts td { padding: 8px 4px; }
+  .facts th { width: 46%; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <p class="back"><a href="/">&larr; All 24 cards</a></p>
+  <header class="top">
+    <div>
+      <h1>Gastly</h1>
+      <p class="sub">#092 &middot; Ghost / Poison</p>
+    </div>
+  </header>
+
+    <div class="chain">
+      <button id="connect" class="primary" type="button">Connect wallet</button>
+      <span class="who" id="walletState">Looking for a wallet...</span>
+    </div>
+  <div class="detail">
+    <article class="card" data-dex="92" data-name="gastly">
+      <img class="art" src="/img/gastly.png" alt="Gastly" width="320" height="320">
+      <p class="dex">#092 &middot; Ghost / Poison</p>
+      <p class="pills"><span class="pill" style="background:#6a5acd">Ghost</span><span class="pill" style="background:#8e44ad">Poison</span></p>
+      <p class="price">Mint on Monad testnet for <b>0.1 MON</b></p>
+      <p class="left">Connect a wallet to see how many are left.</p>
+      <p class="yours"></p>
+      <button class="mint primary" type="button">Mint for 0.1 MON</button>
+      <p class="state"></p>
+    </article>
+    <div>
+      <table class="facts">
+        <tbody>
+          <tr><th scope="row">Number</th><td>#092</td></tr>
+          <tr><th scope="row">Type</th><td>Ghost / Poison</td></tr>
+          <tr><th scope="row">Height</th><td>1.3 m</td></tr>
+          <tr><th scope="row">Weight</th><td>0.1 kg</td></tr>
+          <tr><th scope="row">Strong against</th><td>Grass, Psychic, Ghost, Fairy</td></tr>
+          <tr><th scope="row">Weak against</th><td>Ground, Psychic, Ghost, Dark</td></tr>
+          <tr><th scope="row">Price to mint</th><td>0.1 MON on Monad testnet</td></tr>
+          <tr><th scope="row">How many exist</th><td>10, one to a wallet</td></tr>
+        </tbody>
+      </table>
+      <p class="sub">Strong against is what Gastly's own types hit for double damage. Weak against is what hits Gastly for more than normal damage, counting both of its types.</p>
+    </div>
+  </div>
+
+    <section class="notes">
+      <h2>What this is, and what we assumed</h2>
+      <ul>
+        <li><b>The mint is real.</b> Pressing mint asks your own wallet to send 0.1 MON to the contract at <code>0x0AF9b4C9059F4bc810737da76fecB7B6af920e40</code> on Monad testnet, which mints the card to you and shows you the transaction. Nothing on this page pretends.</li>
+        <li><b>The price.</b> Whoever posted this job asked for ten dollars a mint. Monad testnet coins are handed out free by a faucet and have no dollar price, so a dollar figure cannot be charged here and any conversion would be invented. Every card costs 0.1 MON, the test-network stand-in for that ten dollars. The contract has <code>setPrice</code>, so its owner changes the figure without redeploying.</li>
+        <li><b>Ten of each.</b> Ten copies of each Pokemon exist, ever, and one wallet may hold one copy of a given Pokemon. Ten of a Pokemon therefore means ten different owners. Each card says how many are left, read from the chain.</li>
+        <li><b>Where the chain is read.</b> Only through your own wallet. This site has no server and calls no node of its own, so until a wallet is connected it cannot say how many are left.</li>
+        <li><b>The pictures</b> are files in this site, not fetched from anywhere. Pokemon, its names and its artwork are trademarks of Nintendo, Creatures Inc. and GAME FREAK inc. This is a test-network demonstration, not a licensed product.</li>
+        <li><b>The twenty-four</b> Pokemon here were chosen by the pod for a spread of types; the job did not name any. The contract takes a Pokedex number, and its owner can add more with <code>setCard</code>.</li>
+      </ul>
+      <p class="sub">The contract is <code>0x0AF9b4C9059F4bc810737da76fecB7B6af920e40</code> on Monad testnet, and this card is Pokedex number 92 in it.</p>
+    </section>
+</div>
+<script>
+const CONTRACT = "0x0AF9b4C9059F4bc810737da76fecB7B6af920e40";
+const CHAIN_ID = "0x279f";
+const CHAIN_NAME = "Monad testnet";
+const EXPLORER = "https://testnet.monadscan.com";
+const PRICE_WEI = "0x16345785d8a0000";
+const PRICE_TEXT = "0.1 MON";
+const EDITIONS = 10;
+const MINT_SELECTOR = "0xa0712d68";
+const STATUS_SELECTOR = "0x6289aa08";
+const DEX = [92];
+
+const pad = (n) => BigInt(n).toString(16).padStart(64, '0');
+const eth = () => window.ethereum;
+let account = null;
+
+const say = (el, text, bad) => { if (el) { el.textContent = text; el.classList.toggle('bad', !!bad); } };
+
+function statusCall(who) {
+  // status(address who, uint256[] pokedex) -> (uint256[] minted, bool[] owned)
+  let data = STATUS_SELECTOR + pad(BigInt(who || '0x0')) + pad(64) + pad(DEX.length);
+  for (const d of DEX) data += pad(d);
+  return data;
+}
+
+function readWords(hex) {
+  const body = hex.startsWith('0x') ? hex.slice(2) : hex;
+  const words = [];
+  for (let i = 0; i + 64 <= body.length; i += 64) words.push(body.slice(i, i + 64));
+  return words;
+}
+
+function decodeStatus(hex) {
+  const w = readWords(hex);
+  if (w.length < 2) return null;
+  const at = (word) => Number(BigInt('0x' + word)) / 32;
+  const readArray = (start) => {
+    const n = Number(BigInt('0x' + w[start]));
+    return w.slice(start + 1, start + 1 + n).map((x) => BigInt('0x' + x));
+  };
+  const minted = readArray(at(w[0]));
+  const owned = readArray(at(w[1])).map((x) => x !== 0n);
+  if (minted.length !== DEX.length || owned.length !== DEX.length) return null;
+  return { minted: minted.map(Number), owned };
+}
+
+function paint(row) {
+  DEX.forEach((id, i) => {
+    const card = document.querySelector('[data-dex="' + id + '"]');
+    if (!card) return;
+    const leftEl = card.querySelector('.left');
+    const yoursEl = card.querySelector('.yours');
+    const btn = card.querySelector('button.mint');
+    if (!row) {
+      say(leftEl, 'Connect a wallet to see how many are left.');
+      say(yoursEl, '');
+      if (btn) { btn.disabled = false; btn.textContent = 'Mint for ' + PRICE_TEXT; }
+      return;
+    }
+    const gone = row.minted[i];
+    const left = EDITIONS - gone;
+    const owned = row.owned[i];
+    leftEl.classList.toggle('gone', left === 0);
+    say(leftEl, left + ' of ' + EDITIONS + ' left (' + gone + ' minted)');
+    say(yoursEl, owned ? 'You own this card' : '');
+    if (btn) {
+      if (owned) { btn.disabled = true; btn.textContent = 'Already yours'; }
+      else if (left === 0) { btn.disabled = true; btn.textContent = 'Sold out'; }
+      else { btn.disabled = false; btn.textContent = 'Mint for ' + PRICE_TEXT; }
+    }
+  });
+}
+
+async function onRightChain() {
+  const id = await eth().request({ method: 'eth_chainId' });
+  return id && id.toLowerCase() === CHAIN_ID;
+}
+
+async function refresh() {
+  const bar = document.getElementById('walletState');
+  if (!eth()) { say(bar, 'No wallet in this browser. Install one that speaks to ' + CHAIN_NAME + ' to mint.', true); paint(null); return; }
+  if (!(await onRightChain())) {
+    say(bar, account ? 'Your wallet is on another network. Press Connect to switch to ' + CHAIN_NAME + '.' : 'Connect a wallet on ' + CHAIN_NAME + '.');
+    paint(null);
+    return;
+  }
+  try {
+    const hex = await eth().request({ method: 'eth_call', params: [{ to: CONTRACT, data: statusCall(account) }, 'latest'] });
+    const row = decodeStatus(hex);
+    paint(row);
+    say(bar, account ? 'Connected as ' + account + ' on ' + CHAIN_NAME + '.' : 'Reading ' + CHAIN_NAME + '. Connect a wallet to mint and to see the cards you own.');
+  } catch (err) {
+    paint(null);
+    say(bar, 'Could not read the contract: ' + (err && err.message ? err.message : err), true);
+  }
+}
+
+async function connect() {
+  const bar = document.getElementById('walletState');
+  if (!eth()) { say(bar, 'No wallet in this browser.', true); return; }
+  try {
+    const accounts = await eth().request({ method: 'eth_requestAccounts' });
+    account = accounts && accounts[0] ? accounts[0] : null;
+    if (!(await onRightChain())) {
+      try {
+        await eth().request({ method: 'wallet_switchEthereumChain', params: [{ chainId: CHAIN_ID }] });
+      } catch (switchErr) {
+        if (switchErr && (switchErr.code === 4902 || switchErr.code === -32603)) {
+          await eth().request({ method: 'wallet_addEthereumChain', params: [{
+            chainId: CHAIN_ID, chainName: CHAIN_NAME,
+            nativeCurrency: { name: 'MON', symbol: 'MON', decimals: 18 },
+            rpcUrls: ["https://testnet-rpc.monad.xyz"], blockExplorerUrls: [EXPLORER],
+          }] });
+        } else { throw switchErr; }
+      }
+    }
+  } catch (err) {
+    say(bar, 'Wallet said no: ' + (err && err.message ? err.message : err), true);
+    return;
+  }
+  await refresh();
+}
+
+async function mint(id, card) {
+  const state = card.querySelector('.state');
+  const btn = card.querySelector('button.mint');
+  if (!eth()) { say(state, 'No wallet in this browser.', true); return; }
+  if (!account) { await connect(); if (!account) return; }
+  if (!(await onRightChain())) { say(state, 'Switch your wallet to ' + CHAIN_NAME + ' first.', true); return; }
+  btn.disabled = true;
+  say(state, 'Asking your wallet to pay ' + PRICE_TEXT + '...');
+  let hash;
+  try {
+    hash = await eth().request({ method: 'eth_sendTransaction', params: [{
+      from: account, to: CONTRACT, value: PRICE_WEI, data: MINT_SELECTOR + pad(id),
+    }] });
+  } catch (err) {
+    say(state, 'Not minted: ' + (err && err.message ? err.message : err), true);
+    btn.disabled = false;
+    return;
+  }
+  const link = '<a href="' + EXPLORER + '/tx/' + hash + '" target="_blank" rel="noopener">' + hash + '</a>';
+  state.innerHTML = 'Sent. Transaction ' + link + ' - waiting for ' + CHAIN_NAME + '...';
+  for (let i = 0; i < 90; i++) {
+    await new Promise((r) => setTimeout(r, 2000));
+    let receipt = null;
+    try { receipt = await eth().request({ method: 'eth_getTransactionReceipt', params: [hash] }); } catch (e) { receipt = null; }
+    if (receipt) {
+      const ok = receipt.status === '0x1';
+      state.innerHTML = (ok ? 'Minted. Transaction ' : 'The chain rejected it. Transaction ') + link;
+      state.classList.toggle('bad', !ok);
+      await refresh();
+      return;
+    }
+  }
+  state.innerHTML = 'Still waiting. Transaction ' + link;
+}
+
+document.querySelectorAll('button.mint').forEach((btn) => {
+  btn.addEventListener('click', () => mint(Number(btn.closest('.card').dataset.dex), btn.closest('.card')));
+});
+const connectBtn = document.getElementById('connect');
+if (connectBtn) connectBtn.addEventListener('click', connect);
+
+(async () => {
+  if (!eth()) { await refresh(); return; }
+  // A return visit with the same wallet: eth_accounts answers without a prompt,
+  // so an owned card is read back off the chain and shown straight away.
+  try {
+    const accounts = await eth().request({ method: 'eth_accounts' });
+    account = accounts && accounts[0] ? accounts[0] : null;
+  } catch (e) { account = null; }
+  if (eth().on) {
+    eth().on('accountsChanged', (a) => { account = a && a[0] ? a[0] : null; refresh(); });
+    eth().on('chainChanged', () => refresh());
+  }
+  await refresh();
+})();
+</script>
+</body>
+</html>
